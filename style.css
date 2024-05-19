@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+:root {
+    --cor-primaria: #fff2f2;
+    --cor-secundaria: #ff8a80;
+    --cor-terciaria: #B74242;
+    --cor-quaternaria: #ff8a80;
+    --cor-hoover-nav: #9A5137; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho {
+    padding: 2% 0% 2% 8%;
+    background-color: var(--cor-primaria);
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: "Mitr", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+
+.cabecalho__menu__link:hover {
+    color: var(--cor-hoover-nav);
+    text-decoration: underline;
+}
+
+.hero-content {
+    font-family: "Mitr";
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.body {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero {
+    background: linear-gradient(to bottom right, #ff8a80, #ffc7c4);
+    color: white;
+    padding: 50px 20px 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+.hero-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.text-content {
+    max-width: 50%;
+}
+.text-content h1 {
+    font-size: 2.5em;
+    margin: 0 0 20px 0;
+}
+.text-content p {
+    font-size: 1.5em;
+    margin: 0 0 20px 0;
+}
+.text-content button {
+    background-color: #ff6670;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.hero img {
+    width: 500px;
+    height: auto;
+}
+.waves {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    line-height: 0;
+}
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(130% + 1.3px);
+    height: 100%;
+}
+.wave1 {
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.3;
+}
+.wave2 {
+    bottom: -30px;
+    z-index: 2;
+    opacity: 1;
+}
+.wave3 {
+    bottom: 0px;
+    z-index: 3;
+    opacity: 0.6;
+}
+.shape-fill {
+    fill: #ffffff;
+}
+
+.main-content {
+    padding: 5% 8%;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#hero {
+    display: flex;
+}
+
+.body__apresentacao {
+    font-family: "Montserrat", sans-serif;
+    font-size: 8px;
+}
+
+.body__apresentacao p {
+    font-family: 'Alex Brush', cursive;
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+}
+
+.rodape {
+    padding: 10px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-quaternaria);
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+}
+
+
+/* cartinhas cards*/
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribui os elementos uniformemente na linha */
+}
+
+.card {
+    width: calc(50% - 20px); /* 50% do tamanho do contêiner pai (menos a margem) */
+    background-color: #ffe5e4;
+    border-radius: 10px;
+    margin: 10px;
+    margin-bottom: 20px; /* Espaçamento entre os cartões */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Adicionado */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Para esconder o texto overflow */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+
+/* photos carousel */
+
+.carousel {
+    overflow: hidden;
+    white-space: nowrap; /* Evita que as imagens quebrem para a próxima linha */
+}
+
+.carousel-wrapper {
+    display: inline-block;
+    animation: carouselAnimation 30s infinite linear; /* Ajuste o tempo de animação */
+}
+
+.carousel img {
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: top;
+}
+
+/* Animação do carousel */
+@keyframes carouselAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 800px) {
+    .cabecalho {
+        padding: 8% 8%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .hero img {
+        width: 300px;
+    }
+
+    .main-content {
+        flex-direction: column-reverse;
+        justify-content: start;
+        /* padding: 5%; */
+    }
+    
+    /* .apresentacao__conteudo {
+        width: auto;
+    } */
+
+    .card-container {
+        /* display: flex; */
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card {
+        width: calc(100% - 20px);
+    }
+
+    .carousel-content {
+        justify-content: center;
+    }
+}
