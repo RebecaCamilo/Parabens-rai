@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <div class="text-content">
+                    <h1>Feliz Aniversário, Rai!</h1>
+            </div>
+            <img src="./assets/rai-aniver.png" alt="Handmade exclusive cake">
+        </div>
+        <div class="waves">
+            <div class="wave wave1">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+                    <path class="shape-fill" d="M0.00,50.00 C200.00,150.00 200.00,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
+                </svg>
+            </div>
+            <div class="wave wave2">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+                    <path class="shape-fill" d="M0.00,90.00 C300.00,150.00 300.00,0.00 550.00,60.00 L500.00,150.00 L0.00,150.00 Z"></path>
+                </svg>
+            </div>
+            <div class="wave wave3">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+                    <path class="shape-fill" d="M0.00,10.00 C290.00,190.00 250.00,0.00 600.00,50.00 L500.00,150.00 L0.00,150.00 Z"></path>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <section class="card-container">
+        <div class="card" onclick="showMessage(this)">
+            <div class="hidden">
+                <p>
+                    Feliz aniversáaario! <br>
+                    Mais um ano de maluquices, aventuras e muitas histórias para contar. 
+                    Desejo que seu dia seja especial e que seus sonhos se realizem através do seu esforço diário, talento e vontade de vencer. <br>
+                    Você é exemplo de perseverança e luta.
+                </p>
+            </div>
+            <div class="visible">De: Raissa<br></div>
+        </div>
+        <div class="card" onclick="showMessage(this)">
+            <div class="hidden">
+                <p>                    
+                    Hoje é o dia delaa!! Te desejo toda a felicidade do mundo, que este ano seja repleto de momentos emocionantes, risadas intermináveis, amores, sucesso, doramas e, é claro, muito moneeey. Que você continue sendo essa pessoa maravilhosa que alegra e inspira a vida de todos ao seu redor. <br>
+                    Feliz aniversário, Rai! Que seu dia seja tão incrível quanto você é!
+                </p>
+            </div>
+            <div class="visible">De: Rebeca<br></div>
+        </div>
+        <div class="card" onclick="showMessage(this)">
+            <div class="hidden">
+                <p>
+                    Feliz aniversário, minha amiga! Que seu dia seja tão incrível quanto você é!
+                </p>
+            </div>
+            <div class="visible">De: Victor<br></div>
+        </div>
+        <div class="card" onclick="showMessage(this)">
+            <div class="hidden">
+                <p>
+                    Feliz aniversário, minha amiga! Que seu dia seja tão incrível quanto você é!
+                </p>
+            </div>
+            <div class="visible">De: Kassandra<br></div>
+        </div>
+        <div class="card" onclick="showMessage(this)">
+            <div class="hidden">
+                <p>
+                    Raizinha, feliz aniversario minha najazinha favorita! <br>
+                    Desejo tudo de bom pra você e que você conquiste tudo o que almeja ou seja dinheiro e muita rola, e que nunca pare de ser essa pessoa tão maravilhosa que o Buntantan ama tanto.
+                </p>
+            </div>
+            <div class="visible">De: Giotto<br></div>
+        </div>
+        <div class="card" onclick="showMessage(this)">
+            <div class="hidden">
+                <p>
+                    Feliz aniversário, minha amiga! Que seu dia seja tão incrível quanto você é!
+                </p>
+            </div>
+            <div class="visible">De: Rebeca Minion<br></div>
+        </div>
+    </section>
+
+    <section class="body main-content carousel-content">
+        <div class="carousel" id="carousel">
+            <img src="./assets/foto1.jpeg" alt="Foto 1">
+            <img src="./assets/foto2.jpeg" alt="Foto 2">
+            <img src="./assets/foto3.jpeg" alt="Foto 3">
+            <img src="./assets/foto4.jpeg" alt="Foto 4">
+            <img src="./assets/foto5.jpeg" alt="Foto 5">
+            <img src="./assets/foto6.jpeg" alt="Foto 6">
+            <img src="./assets/foto7.jpeg" alt="Foto 7">
+            <img src="./assets/foto8.jpeg" alt="Foto 8">
+            <img src="./assets/foto9.jpeg" alt="Foto 9">
+            <img src="./assets/foto10.jpeg" alt="Foto 10">
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <p>Raisa 32</p>
+        <p>24/05/2024</p>
+    </footer>
+
+    <script>
+        function showMessage(card) {
+            var hiddenMessage = card.querySelector('.hidden');
+            var visibleMessage = card.querySelector('.visible');
+        
+            hiddenMessage.classList.toggle('visible');
+            hiddenMessage.classList.toggle('hidden');
+        
+            visibleMessage.classList.toggle('visible');
+            visibleMessage.classList.toggle('hidden');
+        }
+        </script>
+</body>
+</html>

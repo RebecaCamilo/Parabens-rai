@@ -47,6 +47,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+    font-family: "Mitr", Arial, sans-serif;
 }
 
 .body {
@@ -87,11 +88,12 @@ nav a {
     flex-direction: column;
 }
 .text-content {
-    max-width: 50%;
+    max-width: 70%;
 }
 .text-content h1 {
     font-size: 2.5em;
     margin: 0 0 20px 0;
+    text-align: center;
 }
 .text-content p {
     font-size: 1.5em;
@@ -232,11 +234,6 @@ img {
     white-space: nowrap; /* Evita que as imagens quebrem para a próxima linha */
 }
 
-.carousel-wrapper {
-    display: inline-block;
-    animation: carouselAnimation 30s infinite linear; /* Ajuste o tempo de animação */
-}
-
 .carousel img {
     display: inline-block;
     max-width: 100%;
@@ -252,6 +249,11 @@ img {
         transform: translateX(-100%);
     }
 }
+
+.carousel img {
+    animation: carouselAnimation 15s infinite linear; /* Velocidade e direção do carousel */
+}
+
 
 @media (max-width: 800px) {
     .cabecalho {
